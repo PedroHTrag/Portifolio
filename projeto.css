@@ -1,0 +1,276 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fcfcfc;
+  color: #ffffff;
+}
+
+/* Cabeçalho */
+.header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-projeto {
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.descricao {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Mosaico */
+.mosaico {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 15px;
+  padding: 40px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.box {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.box img:hover {
+  transform: scale(1.05);
+}
+
+/* Tamanhos variados */
+.grande {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.media {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.pequena {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Seção de vídeo */
+.makingof {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.makingof h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.makingof .intro {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 0.95rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 80%; height: 80%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.fechar {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10000;
+}
+.main-header {
+    background-color: rgba(10, 10, 10, 0.8);
+    color: #000000;
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 25px; /* Ajuste o tamanho do logo */
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    font-weight: 600px
+  ;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.main-nav ul li a:hover {
+    color: #FFA500; /* Laranja de destaque no hover */
+}
+body {
+    font-family: 'Montserrat', sans-serif; /* Sugestão de fonte mais moderna para design */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.whatsapp-float {
+    position: fixed; /* Fixa o botão na tela */
+    width: 60px;
+    height: 60px;
+    bottom: 30px; /* Distância da parte inferior */
+    right: 30px; /* Distância da parte direita */
+    background-color: #1DA851; /* Cor verde do WhatsApp */
+    color: #FFF;
+    border-radius: 50px; /* Deixa o botão redondo */
+    text-align: center;
+    font-size: 22px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Garante que o botão fique acima de tudo */
+    display: flex; /* Para centralizar o ícone */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #1DA851; /* Tom um pouco mais escuro no hover */
+    transform: scale(1.05); /* Pequena animação ao passar o mouse */
+}
+
+.whatsapp-icon {
+    margin-top: 0; /* Ajuste para centralizar o ícone se necessário */
+}
+
+/* Responsividade para o botão WhatsApp */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 20px;
+    }
+}
