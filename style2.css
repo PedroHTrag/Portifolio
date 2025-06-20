@@ -1,0 +1,708 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Container principal centraliza todo o conteúdo */
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Estilos da Seção Hero */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1400x600?text=Imagem+de+Fundo');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+#hero h1 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+
+/* Estilos da Seção Portfólio (Página Principal) */
+#portfolio {
+    background-color: #fff;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.overlay p {
+    color: #ddd;
+    font-size: 0.9em;
+}
+
+
+/* Estilos da Seção Sobre */
+#about {
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    max-width: 100%;
+}
+
+.about-text {
+    flex-grow: 1;
+    min-width: 300px;
+}
+
+/* Estilos da Seção Contato */
+#contact {
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form .btn {
+    align-self: center;
+    width: auto;
+    margin-top: 0;
+}
+
+.form-note {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+
+/* --- ESTILOS REFINADOS E CENTRALIZADOS PARA A PÁGINA DE DETALHES DO PROJETO (.project-page) --- */
+.project-page {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    text-align: center; /* Centraliza conteúdo de texto e elementos inline/inline-block */
+}
+
+/* Estilos para a Imagem Grande Principal (fica centralizada pelo display/margin) */
+.project-hero-image {
+    margin-bottom: 50px; /* Espaço abaixo da imagem */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     max-width: 1000px; /* Opcional: Limita a largura do contêiner da imagem se a imagem for maior */
+}
+.project-hero-image img {
+    display: block;
+    max-width: 100%; /* Torna a imagem responsiva dentro do seu contêiner */
+    height: auto;
+    margin: 0 auto; /* Garante que a imagem seja centralizada dentro do seu bloco pai */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* Estilos para o Título e Subtítulo do Projeto (Centralizados pelo text-align no .project-page) */
+.project-page h1 {
+    margin-bottom: 15px;
+    font-size: 2.8em;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.project-subtitle {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 50px;
+     text-align: center;
+}
+
+/* --- ESTILOS PARA A SEÇÃO DE GALERIA (GRID) --- */
+.project-gallery-section {
+    margin-top: 50px; /* Espaço acima da galeria (após o subtítulo) */
+    margin-bottom: 50px; /* Espaço abaixo da galeria (antes da seção de vídeo) */
+    /* text-align: center; -- já definido no .project-page */
+}
+
+.project-gallery-section h2 {
+    margin-bottom: 30px; /* Espaço abaixo do título da galeria */
+    color: #222;
+    font-size: 2em;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1000px; /* Limita a largura da grade */
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 200px; /* Altura fixa para uniformidade */
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+     transform: scale(1.03);
+     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+/* --- ESTILOS PARA A NOVA SEÇÃO DE VÍDEO --- */
+.project-video-section {
+    margin-top: 50px; /* Espaço acima (depois da galeria) */
+    margin-bottom: 50px; /* Espaço abaixo (antes dos tópicos) */
+     /* text-align: center; -- já definido no .project-page */
+}
+
+.project-video-section h2 {
+    margin-bottom: 30px; /* Espaço abaixo do título do vídeo */
+    color: #222;
+    font-size: 2em;
+    text-align: center;
+}
+
+.video-responsive {
+    position: relative;
+    /* Define o aspect ratio (16:9 = 56.25%, 4:3 = 75%) */
+    padding-bottom: 56.25%; /* Exemplo para 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px; /* Largura máxima para o vídeo */
+    margin: 0 auto; /* Centraliza o contêiner responsivo */
+    border-radius: 8px; /* Bordas arredondadas para o contêiner */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra similar à imagem principal */
+     background-color: #000; /* Fundo preto padrão para vídeos */
+}
+
+.video-responsive iframe,
+.video-responsive video { /* Aplica a embeds e tags video */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Estilos para CADA Seção de Tópico (Centralizada e com Separação) */
+.project-topic-section {
+    max-width: 800px; /* Largura máxima para o conteúdo da descrição */
+    margin: 40px auto; /* Espaço acima/abaixo (separação) e centraliza o bloco */
+    text-align: left; /* Alinha o texto DENTRO de cada tópico à esquerda */
+}
+
+/* Ajusta a margem do PRIMEIRO tópico para ter espaço após a seção de vídeo */
+.project-topic-section:first-of-type {
+     margin-top: 50px; /* Garante espaço após a seção de vídeo */
+}
+
+/* Ajusta a margem do ÚLTIMO tópico para ter espaço antes do bloco de metadados no final */
+.project-topic-section:last-of-type {
+    margin-bottom: 50px; /* Espaço antes do bloco de metadados */
+}
+
+
+.project-topic-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #222;
+    text-align: center; /* Centraliza APENAS o título do tópico */
+}
+
+.project-topic-section p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    text-align: left; /* Mantém parágrafos alinhados à esquerda */
+}
+
+/* Estilos para imagens DENTRO de cada Seção de Tópico (se houver) */
+.project-topic-section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* Estilos para o bloco de Metadados (AGORA MOVIDO PARA O FINAL) */
+.project-meta {
+    max-width: 300px; /* Largura máxima DIMINUIDA */
+    margin: 50px auto; /* Espaço ACIMA (após último tópico) e ABAIXO (antes do link Voltar) e centraliza o bloco */
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.project-meta h3 {
+     margin-top: 0;
+     margin-bottom: 20px;
+     color: #333;
+     font-size: 1.5em;
+     border-bottom: 1px solid #eee;
+     padding-bottom: 10px;
+     text-align: center;
+}
+
+.project-meta p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #555;
+    text-align: left;
+}
+.project-meta strong {
+    color: #333;
+}
+
+/* Estilos para Ícones dentro dos Metadados (Exemplo, se usar Font Awesome) */
+/* .project-meta p i {
+    margin-right: 8px;
+    color: #007bff;
+} */
+
+
+/* Estilos para o link de Voltar (Centralizado) */
+.back-link {
+    margin-top: 50px; /* Espaço ACIMA (após bloco Meta) e ABAIXO (antes do Rodapé) */
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.back-link a {
+    display: inline-block;
+    color: #555;
+    transition: color 0.3s ease;
+}
+.back-link a:hover {
+     color: #007bff;
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile-pic {
+        width: 200px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    /* --- Ajustes para a página de detalhes em telas menores --- */
+    .project-page {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .project-hero-image {
+         margin-bottom: 30px;
+    }
+
+    .project-page h1 {
+        font-size: 2.2em;
+        margin-bottom: 10px;
+    }
+
+    .project-subtitle {
+         font-size: 1.1em;
+         margin-bottom: 30px;
+    }
+
+    /* Galeria em Mobile */
+    .project-gallery-section {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .project-gallery-section h2 {
+        margin-bottom: 20px;
+         font-size: 1.8em;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        height: 150px;
+    }
+
+    /* Seção de Vídeo em Mobile */
+    .project-video-section {
+        margin-top: 30px; /* Ajusta espaço */
+        margin-bottom: 30px;
+    }
+     .project-video-section h2 {
+         margin-bottom: 20px;
+         font-size: 1.8em;
+     }
+    .video-responsive {
+         max-width: 95%; /* Permite que o vídeo ocupe mais espaço em mobile */
+         /* padding-bottom: já ajustado pela porcentagem */
+    }
+
+
+    /* Seções de Tópicos em Mobile */
+    .project-topic-section {
+        max-width: 95%;
+        margin: 30px auto; /* Espaço e centralização */
+        text-align: left;
+    }
+
+    /* Ajusta a margem do PRIMEIRO tópico para ter espaço após a seção de vídeo */
+    .project-topic-section:first-of-type {
+         margin-top: 30px; /* Garante espaço após a seção de vídeo em mobile */
+    }
+    .project-topic-section:last-of-type {
+        margin-bottom: 40px; /* Espaço antes do bloco de metadados */
+    }
+
+
+    .project-topic-section h3 {
+         margin-top: 0;
+         margin-bottom: 15px;
+        font-size: 1.6em;
+        text-align: center;
+    }
+
+     .project-topic-section p {
+        margin-bottom: 20px;
+        font-size: 1em;
+        line-height: 1.7;
+    }
+
+     .project-topic-section img {
+         margin: 20px auto;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+     }
+
+    /* Metadados em Mobile */
+     .project-meta {
+        max-width: 95%;
+        margin: 40px auto;
+        padding: 20px;
+         box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+         text-align: left;
+    }
+
+     .project-meta h3 {
+         margin-bottom: 15px;
+         font-size: 1.4em;
+         border-bottom: none;
+         padding-bottom: 0;
+         text-align: center;
+     }
+
+      .project-meta p {
+          margin: 8px 0;
+      }
+
+
+     .back-link {
+         margin-top: 40px;
+         font-size: 1.1em;
+     }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 1.5em;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+      .project-page h1 {
+          font-size: 1.8em;
+      }
+      .project-subtitle {
+          font-size: 1em;
+      }
+       .project-gallery-section h2 {
+         font-size: 1.6em;
+      }
+      .project-video-section h2 {
+          font-size: 1.6em;
+      }
+       .project-topic-section h3 {
+        font-size: 1.4em;
+    }
+
+     .project-topic-section p {
+        font-size: 1em;
+    }
+
+      .gallery-grid {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 8px;
+      }
+       .gallery-grid img {
+           height: 120px;
+       }
+       /* .video-responsive - já ajustado em 992px */
+}

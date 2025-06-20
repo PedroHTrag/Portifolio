@@ -11,6 +11,17 @@ body {
   color: #ffffff;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* Cabeçalho */
 .header {
   text-align: center;
@@ -201,11 +212,11 @@ body {
 
 .main-nav ul li a {
     color: #fff;
-    font-weight: 600px
-  ;
+    font-weight: 600;
     font-size: 0.95em;
     transition: color 0.3s ease;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .main-nav ul li a:hover {
@@ -227,31 +238,31 @@ body {
 }
 
 .whatsapp-float {
-    position: fixed; /* Fixa o botão na tela */
+    position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 30px; /* Distância da parte inferior */
-    right: 30px; /* Distância da parte direita */
-    background-color: #1DA851; /* Cor verde do WhatsApp */
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Cor verde oficial do WhatsApp */
     color: #FFF;
-    border-radius: 50px; /* Deixa o botão redondo */
+    border-radius: 50px;
     text-align: center;
     font-size: 22px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-    z-index: 9999; /* Garante que o botão fique acima de tudo */
-    display: flex; /* Para centralizar o ícone */
+    z-index: 9999;
+    display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .whatsapp-float:hover {
-    background-color: #1DA851; /* Tom um pouco mais escuro no hover */
-    transform: scale(1.05); /* Pequena animação ao passar o mouse */
+    background-color: #1DA851;
+    transform: scale(1.05);
 }
 
 .whatsapp-icon {
-    margin-top: 0; /* Ajuste para centralizar o ícone se necessário */
+    margin-top: 0;
 }
 
 /* Responsividade para o botão WhatsApp */
